@@ -1,0 +1,24 @@
+
+<div class="container my-3">    
+    <div class="row g-3">
+        @for(obj of pokemon(); track obj.id) {
+            <div class="col-md-6 col-lg-2">
+                <div class="card p-3 text-center">
+                    <span class="fs-6 card-title">{{ paraTitleCase(obj.name) }}</span>
+                    <div class="d-flex justify-content-center gap-2">
+                        @for (tipo of obj.types; track $index) {
+                            <span class="badge rounded-pill">{{ paraTitleCase(tipo) }}</span>
+                        }
+                    </div>
+
+                    @if(obj.sprite) {
+                        <img [src]="obj.sprite" [alt]="obj.name">
+                    } @else {
+                        <p>Imagem não disponível</p>
+                    }
+
+                </div>
+            </div>
+        }
+            
+</div>
