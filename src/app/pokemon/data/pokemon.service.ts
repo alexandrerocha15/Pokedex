@@ -20,7 +20,7 @@ export class PokemonService {
     private readonly http = inject(HttpClient);
     private readonly apiUrl = inject(POKE_API_URL);
 
-    lsitar() : Observable<Pokemon[]> {
+    listar() : Observable<Pokemon[]> {
         // O primeiro GET traz apenas os nomes e as URLs dos Pokémons.
         return this.http.get<objetoRespostaHttp>(this.apiUrl).pipe(
             switchMap((obj) => {
