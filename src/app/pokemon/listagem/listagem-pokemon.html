@@ -3,11 +3,11 @@
     @for (pkmn of pokemon(); track pkmn.id) {
       <div class="col-md-6 col-lg-2">
         <div
-          class="card p-3 text-center"
+          class="pokemon-card p-3 text-center"
           [style.border]="'2px solid transparent'"
           [style.background]="pkmn.background"
         >
-          <span class="fs-6 fw-medium card-title">{{ pkmn.displayName }}</span>
+          <span class="fs-6 fw-medium pokemon-card-title">{{ pkmn.displayName }}</span>
 
           <div class="d-flex justify-content-center gap-2">
             @for (type of pkmn.types; track type.name) {
