@@ -68,9 +68,11 @@
 body {
     min-height: 100vh;
     background-color: var(--bs-body-bg);
-    background-image:
-      radial-gradient(circle at 0% 0%, rgba(61, 126, 255, 0.16), transparent 28rem),
-      radial-gradient(circle at 100% 0%, rgba(220, 53, 69, 0.14), transparent 24rem);
+    background:
+        radial-gradient(circle at 20% 20%, var(--bs-tertiary-bg) 0 2px, transparent 3px),
+        var(--bs-body-bg);
+
+    background-size: 32px 32px;
 }
 
 .navbar.bg-body-tertiary {
