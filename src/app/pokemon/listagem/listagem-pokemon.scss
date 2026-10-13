@@ -1,8 +1,16 @@
 .pokemon-card {
     --bs-card-bg: var(--pokedex-surface);
     min-height: 100%;
-    border-radius: 1rem;
     box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.28);
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.pokemon-card:hover{
+    transform: translateY(-4px);
 }
 
 .pokemon-card img {
@@ -16,4 +24,10 @@
 
 .card-title {
     font-family: var(--pokedex-font-display);
+}
+
+@media (prefers-reduced-motion: reduce){
+    .pokemon-card {
+        transition: none;
+    }
 }
